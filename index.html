@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- links to font from google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <!-- links for on scroll animation -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .logo {
+            float: left;
+            width: 45%;
+            text-align: center;
+            animation: logo-rotate 8s 1s infinite cubic-bezier(.5, .15, .25, .55);
+            margin-bottom: 115px;
+        }
+        /* animation effect on logo */
+        
+        @keyframes logo-rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .name {
+            float: left;
+            width: 55%;
+            text-align: center;
+        }
+        
+        .welcome-container {
+            float: left;
+            width: 100%;
+        }
+        
+        .graphic-design {
+            float: left;
+            width: 50%;
+            background-color: rgb(71, 79, 105);
+        }
+        
+        .graphic-design:hover {
+            background-color: rgb(76, 84, 110);
+        }
+        
+        .image {
+            width: 40%;
+            height: auto;
+            float: left;
+            padding: 50px 15px 50px 60px;
+        }
+        
+        .image:hover {
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        
+        .category-text {
+            margin-top: 75px;
+        }
+        
+        .category-text1 {
+            font-size: 2vw;
+        }
+        
+        .category-text2 {
+            font-size: 1.3vw;
+        }
+        
+        .web-design {
+            float: left;
+            width: 50%;
+            background-color: rgb(71, 79, 105);
+        }
+        
+        .web-design:hover {
+            background-color: rgb(76, 84, 110);
+        }
+        
+        .drawing-painting {
+            float: left;
+            width: 50%;
+            background-color: rgb(88, 96, 122);
+        }
+        
+        .drawing-painting:hover {
+            background-color: rgb(93, 101, 127);
+        }
+        
+        .other-category {
+            float: left;
+            width: 50%;
+            background-color: rgb(88, 96, 122);
+        }
+        
+        .other-category:hover {
+            background-color: rgb(93, 101, 127);
+        }
+        /* making elements responsive */
+        
+        @media (min-width:621px) and (max-width:1000px) {
+            .logo,
+            .name,
+            .graphic-design,
+            .web-design,
+            .drawing-painting,
+            .other-category {
+                width: 100%;
+            }
+            .category-text1 {
+                font-size: 2.5vw;
+            }
+            .category-text2 {
+                font-size: 2vw;
+            }
+        }
+        /* for mobile phones */
+        
+        @media only screen and (max-width:620px) {
+            .logo,
+            .name,
+            .graphic-design,
+            .web-design,
+            .drawing-painting,
+            .other-category {
+                width: 100%;
+            }
+            .line:before,
+            .line:after {
+                visibility: hidden;
+            }
+            .line {
+                font-size: 3vw;
+            }
+            .category-text1 {
+                font-size: 2.5vw;
+            }
+            .category-text2 {
+                font-size: 2vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- link and script is setting up for on scroll animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        })
+        wow.init();
+    </script>
+    <div class="container">
+        <!-- nav bar from https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp -->
+        <div id="myNav" class="overlay">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio1.html">Digital Design</a>
+                <a href="portfolio2.html">Drawing & Painting</a>
+                <a href="other.html">Case Study</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+        </div>
+        <div class="menu" style="width: 100%;">
+            <span onclick="openNav()" class="menu-symbol">&#8801;</span>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+        <div class="logo">
+            <img src="images/logo.png" style="width: 30vw;" class="wow slideInLeft">
+        </div>
+        <div class="name wow slideInRight">
+            <h1 style="font-size: 9vw; font-weight: bolder;">ALLIE VORLEY</h1>
+        </div>
+        <div class="welcome-container">
+            <p class="line wow fadeInUp">Welcome to Allie Vorley's portfolio of art and design.</p>
+        </div>
+        <div class="fix">
+            <div class="graphic-design wow fadeInLeft">
+                <img src="images/graphic-example.jpg" class="image">
+                <div class="category-text">
+                    <h2 class="category-text1">Illustration & Animation</h2>
+                    <p><a href="portfolio1.html" class="link category-text2">Exlore &rarr;</a></p>
+                </div>
+            </div>
+            <div class="web-design wow fadeInRight">
+                <img src="images/web-example.JPG" class="image">
+                <div class="category-text">
+                    <h2 class="category-text1">Web Design</h2>
+                    <p><a href="portfolio1.html" class="link category-text2">Exlore &rarr;</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="fix">
+            <div class="drawing-painting wow fadeInLeft">
+                <img src="images/drawing-example.jpeg" class="image">
+                <div class="category-text">
+                    <h2 class="category-text1">Drawing</h2>
+                    <p><a href="portfolio2.html" class="link category-text2">Exlore &rarr;</a></p>
+                </div>
+            </div>
+            <div class="other-category wow fadeInRight">
+                <img src="images/personal-example.jpg" style="filter: brightness(115%);" class="image">
+                <div class="category-text">
+                    <h2 class="category-text1">Painting</h2>
+                    <p><a href="portfolio2.html" class="link category-text2">Exlore &rarr;</a></p>
+                </div>
+            </div>
+        </div>
+        <hr style="float: left; width: 100%; color: white; margin-bottom: 75px; margin-top: 20px; height: 1.5px; background-color: white;">
+        <div class="footer wow fadeInUp">
+            <div class="map">
+                <!-- map code from google maps, directions from https://docs.presscustomizr.com/article/206-integrating-a-google-map-of-your-headquarter-in-the-footer-of-the-customizr-theme -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86094.90246629078!2d-122.22117175327112!3d47.597633633079916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906bcfa3a66041%3A0xbacf5482ead00765!2sBellevue%2C%20WA!5e0!3m2!1sen!2sus!4v1612908026827!5m2!1sen!2sus"
+                    width="300" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+            </div>
+            <div class="footer-middle">
+                <h1 class="footer-name">Allie Vorley</h1>
+                <!-- top scroll button from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+                <button onclick="topFunction()" class="topBtn" title="Go to top">Return To Top</button>
+                <script>
+                    mybutton = document.getElementsByClasses("topBtn");
+
+                    function topFunction() {
+                        document.body.scrollTop = 0; // For Safari
+                        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+                    }
+                </script>
+            </div>
+            <div class="connect">
+                <h2 style="font-size: 2.4vw;">Connect:</h2>
+                <a href="https://www.instagram.com/allie.vorley/" target="_blank"><img src="images/instagram.png" class="social-media"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" class="social-media"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="images/twitter.png" class="social-media"></a>
+            </div>
+            <p class="footer-bottom">&copy; 2021 Allie Vorley</p>
+        </div>
+    </div>
+</body>
+
+</html>
