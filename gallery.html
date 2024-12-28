@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <!--icons for footer-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--font-->
+    <link rel="stylesheet" href="https://use.typekit.net/dvc1xlu.css">
+    <!--on scroll animations-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        })
+        wow.init();
+    </script>
+    <style>
+
+        .heading {
+            float: left;
+            width: 100%;
+            text-align: center;
+        }
+        .heading-text {
+            display: flex;
+            flex-direction: row;
+        }
+        /* horizontal line https://www.geeksforgeeks.org/how-to-make-horizontal-line-with-words-in-the-middle-using-css/ */
+        .heading-text:before, .heading-text:after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid white;
+            margin: auto;
+        }
+
+        .gallery-container {
+            float: left;
+            width: 100%;
+        }
+
+        .row {
+            float: left;
+            width: 100%;
+            padding: 2% 0;
+        }
+
+        .row1 {
+            background-color: rgb(46, 59, 97);
+        }
+
+        .row2 {
+            background-color: rgb(55, 71, 115);
+        }
+
+
+        .img:hover {
+            box-shadow: 20px 20px 18px rgb(13, 22, 48);
+            transform: rotate(1.5deg) scaleX(1.05) scaleY(1.05);
+            transition: 0.5s;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+        }
+
+        .column-dorm {
+            float: left;
+            width: 68%;
+        }
+
+        .column-dormprog {
+            float: left;
+            width: 32%;
+        }
+
+        .column-lant {
+            float: left;
+            width: 40%;
+        }
+
+        .column-obj {
+            float: left;
+            width: 60%;
+        }
+
+        .column-og {
+            float: left;
+            width: 35.5%;
+        }
+
+        .column-prog {
+            float: left;
+            width: 64.5%;
+        }
+
+        .column-mt {
+            float: left;
+            width: 37.5%;
+        }
+
+        .column-balloon {
+            float: left;
+            width: 62.5%;
+        }
+
+        .img-point {
+            width: 80%;
+            height: auto;
+            margin: 0 10%;
+        }
+
+        .img-abst {
+            width: 87%;
+            height: auto;
+            margin: 0 6.5%;
+        }
+
+        .img-vert {
+            width: 60%;
+            height: auto;
+            margin: 0 20%;
+        }
+        .img-skel {
+            width: 84%;
+            height: auto;
+            margin: 0 8%;
+        }
+
+        .img-port {
+            width: 80%;
+            height: auto;
+            margin: 0 10%;
+        }
+
+        .img1 {
+            width: 80%;
+            height: auto;
+            margin: 0 10%;
+        }
+
+        .img-brek {
+            width: 66%;
+            height: auto;
+            margin: 0 17%;
+        }
+        
+        .text1 {
+            width: 100%;
+            text-align: center;
+        }
+
+        .column2 {
+            float: left;
+            width: 100%;
+        }
+        .img-alb {
+            width: 66%;
+            height: auto;
+            margin: 0 17%;
+        }
+        .column3 {
+            float: left;
+            width: 33%;
+        }
+
+    </style>
+</head>
+
+<body>
+        <!-- nav bar from https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp -->
+        <div id="myNav" class="overlay">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="casestudy.html">Case Study</a>
+                <a href="writing.html">Writing</a>
+            </div>
+        </div>
+        
+        <div class="menu" style="width: 100%;">
+            <span onclick="openNav()" class="menu-symbol">&#8801;</span>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+
+    <h1 class="title wow fadeInDown">GALLERY</h1>
+    <div class="gallery-container">
+        <div class="heading">
+            <h2 class="heading-text wow fadeInDown"> Painting </h2>
+        </div>
+        <div class="row row1">
+            <div class="column">
+                <a href="images/pointillism.jpg" target="blank"><img src="images/pointillism.jpg" class="img-point img wow fadeInLeft"></a>
+                <h3 class="text1 wow fadeInUp"><i>North Carolina Fall</i></h3>
+                <p class="text1 wow fadeInUp">2023 &#124; Oil paint (pointillism) &#124; 12x16in</p>
+            </div>
+            <div class="column">
+                <a href="images/abstract.jpg" target="blank"><img src="images/abstract.jpg" class="img-abst img wow fadeInRight"></a>
+                <h3 class="text1 wow fadeInUp"><i>Underwater</i></h3>
+                <p class="text1 wow fadeInUp">2023 &#124; Oil paint, cold wax medium &#124; 20x30in</p>
+            </div>
+        </div>
+
+        <div class="row row2">
+            <div class="column-dorm">
+                <a href="images/desk.jpg" target="blank"><img src="images/desk.jpg" class="img1 img wow fadeInLeft"></a>
+                <h3 class="text1 wow fadeInUp"><i>Dorm</i></h3>
+                <p class="text1 wow fadeInUp">2023 &#124; Oil paint &#124; 36x48in</p>
+            </div>
+            <div class="column-dormprog wow fadeInRight">
+                <a href="images/progress1.png" target="blank"><img src="images/progress1.png" class="img1 img" style="margin-bottom: 20px;"></a>
+                <a href="images/progress2.png" target="blank"><img src="images/progress2.png" class="img1 img"></a>
+                <h3 class="text1 wow fadeInUp">Process</h3>
+            </div>
+        </div>
+        <div class="heading">
+            <h2 class="heading-text wow fadeInDown"> Drawing </h2>
+        </div>
+
+        <div class="row row1">
+            <div class="column">
+                <a href="images/eye.png" target="blank"><img src="images/eye.png" class="img-vert img wow fadeInLeft"></a>
+                <h3 class="text1 wow fadeInUp">Eye study</h3>
+                <p class="text1 wow fadeInUp">2022 &#124; Charcoal &#124; 5x4in</p>
+            </div>
+            <div class="column">
+                <a href="images/face.png" target="blank"><img src="images/face.png" class="img-vert img wow fadeInRight"></a>
+                <h3 class="text1 wow fadeInUp">Portrait study</h3>
+                <p class="text1 wow fadeInUp">2022 &#124; Charcoal &#124; 12x10in</p>
+            </div>
+        </div>
+
+        <div class="row row2">
+            <div class="column">
+                <a href="images/skeleton.jpeg" target="blank"><img src="images/skeleton.jpeg" class="img-skel img wow fadeInLeft"></a>
+                <h3 class="text1 wow fadeInUp">Anatomical Study</h3>
+                <p class="text1 wow fadeInUp">2022 &#124; Charcoal (subtractive drawing) &#124; 18x24in</p>
+            </div>
+            <div class="column">
+                <a href="images/portrait.jpeg" target="blank"><img src="images/portrait.jpeg" class="img-port img wow fadeInRight"></a>
+                <h3 class="text1 wow fadeInUp"><i>A Fractured Self</i></h3>
+                <p class="text1 wow fadeInUp">2022 &#124; Charcoal &#124; 36x48in</p>
+            </div>
+        </div>
+
+        <div class="row row1">
+            <div class="column-lant">
+                <a href="images/lantern.jpeg" target="blank"><img src="images/lantern.jpeg" class="img1 img wow fadeInLeft"></a>
+                <h3 class="text1 wow fadeInUp"><i>Luminescent</i></h3>
+                <p class="text1 wow fadeInUp">2022 &#124; Pen &#124; 24x18in</p>
+            </div>
+            <div class="column-obj">
+                <a href="images/objects.jpeg" target="blank"><img src="images/objects.jpeg" class="img1 img wow fadeInRight"></a>
+                <h3 class="text1 wow fadeInUp"><i>Miscellaneous</i></h3>
+                <p class="text1 wow fadeInUp">2022 &#124; Pen &#124; 28x36in</p>
+            </div>
+        </div>
+
+        <div class="heading">
+            <h2 class="heading-text wow fadeInDown"> Digital Art </h2>
+        </div>
+
+        <div class="row row2">
+            <div class="column2">
+                <a href="images/albumcover.png" target="blank"><img src="images/albumcover.png" class="img-alb img wow fadeInUp"></a>
+                <h3 class="text1 wow fadeInUp">Album Cover Redesign</h3>
+                <p class="text1 wow fadeInUp">2022 &#124; Adobe Photoshop &#124; 12x24in</p>
+            </div>
+        </div>
+
+        <div class="row row2">
+            <div class="column-og">
+                <a href="images/wallows.jpg" target="blank"><img src="images/wallows.jpg" class="img1 img wow fadeInLeft"></a>
+                <h3 class="text1 wow fadeInUp">Original cover (<i>Nothing Happens,</i> Wallows)</h3>
+            </div>
+            <div class="column-prog">
+                <a href="images/albumprogress.png" target="blank"><img src="images/albumprogress.png" class="img1 img wow fadeInRight"></a>
+                <h3 class="text1 wow fadeInUp">Process</h3>
+            </div>
+        </div>
+    
+        <div class="row row1">
+            <div class="column-balloon">
+                <a href="images/hotairballoon.gif" target="blank"><img src="images/hotairballoon.gif" class="img1 img wow fadeInLeft"></a>
+                <h3 class="text1 wow fadeInUp"><i>Boundless</i></h3>
+                <p class="text1 wow fadeInUp">2021 &#124; Adobe Photoshop (animation) &#124; 8.5x11in</p>
+            </div>
+            <div class="column-mt">
+                <a href="images/mountains.gif" target="blank"><img src="images/mountains.gif" class="img1 img wow fadeInRight"></a>
+                <h3 class="text1 wow fadeInUp"><i>August Reflections</i></h3>
+                <p class="text1 wow fadeInUp">2021 &#124; Adobe Photoshop (animation) &#124; 11x8.5in</p>
+            </div>
+        </div>
+
+        <div class="row row2">
+            <div class="column">
+                <a href="images/breakfast.png" target="blank"><img src="images/breakfast.png" class="img-brek img wow fadeInLeft"></a>
+                <h3 class="text1 wow fadeInUp"><i>Breakfast in Color</i></h3>
+                <p class="text1 wow fadeInUp">2021 &#124; Adobe Photoshop &#124; 10x10in</p>
+            </div>
+            <div class="column">
+                <a href="images/breakfastprogress.png" target="blank"><img src="images/breakfastprogress.png" class="img-brek img wow fadeInRight"></a>
+                <h3 class="text1 wow fadeInUp">Process</h3>
+            </div>
+        </div>
+
+        <div class="row row1">
+            <div class="column3">
+                <a href="images/fishcollage.jpg" target="blank"><img src="images/fishcollage.jpg" class="img1 img wow fadeInLeft"></a>
+                <h3 class="text1 wow fadeInUp"><i>Part 1: Zoomed Out</i></h3>
+                <p class="text1 wow fadeInUp">2022 &#124; Adobe Photoshop &#124; 12x12in</p>
+            </div>
+            <div class="column3">
+                <a href="images/fishline.jpg" target="blank"><img src="images/fishline.jpg" class="img1 img wow fadeInUp"></a>
+                <h3 class="text1 wow fadeInUp"><i>Part 2: Ripples</i></h3>
+                <p class="text1 wow fadeInUp">2022 &#124; Adobe Photoshop &#124; 12x12in</p>
+            </div>
+            <div class="column3">
+                <a href="images/fishtext.jpg" target="blank"><img src="images/fishtext.jpg" class="img1 img wow fadeInRight"></a>
+                <h3 class="text1 wow fadeInUp"><i>Part 3: Beneath the Surface</i></h3>
+                <p class="text1 wow fadeInUp">2022 &#124; Adobe Photoshop &#124; 12x12in</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!--footer-->
+    <footer id="footer-content">
+        <!-- top scroll button from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+        <button onclick="topFunction()" class="topBtn" title="Go to top">&uarr; Back to top</button>
+        <script>
+            mybutton = document.getElementsByClasses("topBtn");
+    
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+        <ul class="foot-ul">
+            <div id="icon-container">
+                <a href="https://www.instagram.com/alexisvorley/" target="blank">
+                    <div class="icon">
+                        <li><i class="fa fa-instagram"></i></li>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/allie-vorley-a3116120b/" target="blank">
+                    <div class="icon">
+                        <li><i class="fa fa-linkedin"></i></li>
+                    </div>
+                </a>
+                <a href="mailto:allievorley@gmail.com">
+                    <div class="icon">
+                        <li><i class="fa fa-envelope"></i></li>
+                    </div>
+                </a>
+            </div>
+        </ul>
+        <p class="copyright">&copy 2024 Alexis Vorley</p>
+    </footer>
+</body>
+</html>
