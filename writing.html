@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing</title>
+    <link rel="stylesheet" href="style.css">
+    <!--icons for footer-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--font-->
+    <link rel="stylesheet" href="https://use.typekit.net/dvc1xlu.css">
+    <style>
+        .writing-container {
+            float: left;
+            width: 100%;
+        }
+
+        .row {
+            float: left;
+            width: 100%;
+        }
+   
+        .section {
+            float: left;
+            width: 50%;
+            padding: 15px 0;
+        }
+
+        .img-container {
+            float: left;
+            width: 55%;
+        }
+        
+        .img {
+            width: 75%;
+            height: auto;
+            padding-left: 10px;
+        }
+        /* image rotates slighltly, grows larger, and adds a drop shadow when you hover over it (transition makes it smooth) */
+        
+        .img:hover {
+            box-shadow: 20px 20px 18px rgb(13, 22, 48);
+            transform: rotate(1.5deg) scaleX(1.05) scaleY(1.05);
+            transition: 0.5s;
+        }
+        
+        .text {
+            float: left;
+            width: 45%;
+        }
+        
+        .link {
+            color: rgb(138,155,201);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- nav bar from https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp -->
+    <div id="myNav" class="overlay">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <div class="overlay-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="casestudy.html">Case Study</a>
+            <a href="writing.html">Writing</a>
+        </div>
+    </div>
+        
+    <div class="menu" style="width: 100%;">
+        <span onclick="openNav()" class="menu-symbol">&#8801;</span>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+    <h1 class="title">WRITING</h1>
+
+    <div class="writing-container">
+        <div class="row">
+            <div class="section">
+                <div class="img-container">
+                    <a href="images/POL.pdf" target="blank"><img src="images/POL.pdf" class="img" style="width: 90%;"></a>
+                </div>
+                <div class="text">
+                    <h2>Identity in American Politics</h2>
+                    <p>Political science research paper</p>
+                    <p>Read the full paper <a href="images/POL.pdf" target="blank" class="link">here.</a></p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="img-container">
+                    <a href="images/SPA.pdf" target="blank"><img src="images/SPA.pdf" class="img" style="width: 90%;"></a>
+                </div>
+                <div class="text">
+                    <h2>La industria bananera: el arte revela el abuso</h2>
+                    <p>Spanish research paper</p>
+                    <p>Read the full paper <a href="images/SPA.pdf" target="blank" class="link">here.</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="section">
+                <div class="img-container">
+                    <a href="images/WRI2.pdf" target="blank"><img src="images/WRI2.pdf" class="img" style="width: 90%;"></a>
+                </div>
+                <div class="text">
+                    <h2>Inverting Racial Stereotypes in <i>Black Panther</i></h2>
+                    <p>Film analysis</p>
+                    <p>Read the full paper <a href="images/WRI2.pdf" target="blank" class="link">here.</a></p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="img-container">
+                    <a href="images/WRI4.pdf" target="blank"><img src="images/WRI4.pdf" class="img" style="width: 90%;"></a>
+                </div>
+                <div class="text">
+                    <h2><i>Moonlight: </i>Vulnerability vs. Performativity</h2>
+                    <p>Film analysis</p>
+                    <p>Read the full paper <a href="images/WRI4.pdf" target="blank" class="link">here.</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="section">
+                <div class="img-container">
+                    <a href="images/EDU1.pdf" target="blank"><img src="images/EDU1.pdf" class="img" style="width: 90%;"></a>
+                </div>
+                <div class="text">
+                    <h2>Maintaining Racial Diversity Without Affirmative Action</h2>
+                    <p>Education policy memo</p>
+                    <p>Read the full paper <a href="images/EDU1.pdf" target="blank" class="link">here.</a></p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="img-container">
+                    <a href="images/EDU3.pdf" target="blank"><img src="images/EDU3.pdf" class="img" style="width: 90%;"></a>
+                </div>
+                <div class="text">
+                    <h2>Florida Book Ban Reforms</h2>
+                    <p>Education policy memo</p>
+                    <p>Read the full paper <a href="images/EDU3.pdf" target="blank" class="link">here.</a></p>
+                </div>
+            </div>
+        </div>
+
+    <!--footer-->
+    <footer id="footer-content">
+        <!-- top scroll button from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+        <button onclick="topFunction()" class="topBtn" title="Go to top">&uarr; Back to top</button>
+        <script>
+            mybutton = document.getElementsByClasses("topBtn");
+    
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+        <ul class="foot-ul">
+            <div id="icon-container">
+                <a href="https://www.instagram.com/alexisvorley/" target="blank">
+                    <div class="icon">
+                        <li><i class="fa fa-instagram"></i></li>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/allie-vorley-a3116120b/" target="blank">
+                    <div class="icon">
+                        <li><i class="fa fa-linkedin"></i></li>
+                    </div>
+                </a>
+                <a href="mailto:allievorley@gmail.com">
+                    <div class="icon">
+                        <li><i class="fa fa-envelope"></i></li>
+                    </div>
+                </a>
+            </div>
+        </ul>
+        <p class="copyright">&copy 2024 Alexis Vorley</p>
+    </footer>
+</body>
+</html>
