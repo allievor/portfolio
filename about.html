@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <!--icons for footer-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--font-->
+    <link rel="stylesheet" href="https://use.typekit.net/dvc1xlu.css">
+    <!--on scroll animations-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        })
+        wow.init();
+    </script>
+    <style>
+        
+        .heading {
+            float: left;
+            width: 100%;
+            text-align: center;
+        }
+
+        .about-container {
+            float: left;
+            width: 100%;
+        }
+        .row {
+            float: left;
+            width: 100%;
+        }
+
+        .headshot-container {
+            float: left;
+            width: 30%;
+        }
+        .hobbies {
+            float: left;
+            width: 29%;
+            padding: 2%;
+        }
+        .hobbies-img {
+            float: left;
+            width: 18%;
+            padding: 0 2%;
+        }
+
+        .headshot {
+            width: 70%;
+            height: auto;
+            border-radius: 100%;
+            border: 3px solid white;
+            margin-left: 35%;
+        }
+        
+        img:hover {
+            box-shadow: 15px 15px 12px rgb(13, 22, 48);
+            transform: scaleX(1.05) scaleY(1.05);
+            transition: 0.5s;
+        }
+        
+        .bio {
+            float: left;
+            width: 60%;
+            padding: 5%;
+        }
+
+        .link {
+            background-color: rgb(55, 71, 115);
+            color: white;
+            padding: 5% 20%;
+            text-decoration: none;
+        }
+
+        .link-container {
+            float: left;
+            width: 30%;
+        }
+
+        .link:hover {
+            background-color: rgb(65, 83, 133);
+        }
+
+    </style>
+</head>
+
+<body>
+        <!-- nav bar from https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp -->
+        <div id="myNav" class="overlay">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="casestudy.html">Case Study</a>
+                <a href="writing.html">Writing</a>
+            </div>
+        </div>
+        
+        <div class="menu" style="width: 100%;">
+            <span onclick="openNav()" class="menu-symbol">&#8801;</span>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+    <h1 class="title wow fadeIn">ABOUT</h1>
+
+    <div class="about-container">
+        <div class="row">
+            <div class="headshot-container">
+                <img src="images/headshot.JPG" class="headshot wow fadeInLeft">
+            </div>
+            <div class="bio wow fadeInRight">
+                <h2>Hi, I'm Alexis Vorley!</h2>
+                <p>I'm a sophomore at Davidson College studying Computer Science. I’m excited to explore new ways to combine my interdisciplinary interests across engineering, education, art, and environmental studies. I want to apply my diverse skills and experience to create a genuine positive impact. I’m passionate about increasing accessibility and inclusion within STEM education and actively working to combat climate change.  </p>
+                <div class="link-container">
+                    <h3><a href="mailto:allievorley@gmail.com" class="link">EMAIL</a></h3>
+                </div>
+                <div class="link-container">
+                    <h3><a href="images/resume.pdf" class="link" target="blank">RESUME</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 2%;">
+        <div class="hobbies wow fadeInLeft">
+            <h2>In my free time...</h2>
+            <p>Growing up in the Pacific Northwest fostered my love of the outdoors. I love exploring new areas through hiking, backpacking, skiing, and swimming. 
+
+                I also love learning new creative hobbies; most recently, I taught myself to sew and embroider.
+                When I'm not outdoors or creating, I can be found curled up with a good memoir or mystery novel!
+            </p>
+        </div>
+        <div class="hobbies-img wow fadeInUp"> 
+            <img src="images/allie-1.jpeg" style="float: left; width: 100%;">
+        </div>   
+        <div class="hobbies-img wow fadeInUp">
+            <img src="images/allie-2.jpeg" style="float: left; width: 100%;">
+        </div>   
+        <div class="hobbies-img wow fadeInUp">
+            <img src="images/allie-3.jpeg" style="float: left; width: 100%;">
+        </div>   
+    </div>
+    <!--footer-->
+    <footer id="footer-content">
+        <!-- top scroll button from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+        <button onclick="topFunction()" class="topBtn" title="Go to top">&uarr; Back to top</button>
+        <script>
+            mybutton = document.getElementsByClasses("topBtn");
+        
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+        <ul class="foot-ul">
+            <div id="icon-container">
+                <a href="https://www.instagram.com/alexisvorley/" target="blank">
+                    <div class="icon">
+                        <li><i class="fa fa-instagram"></i></li>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/allie-vorley-a3116120b/" target="blank">
+                    <div class="icon">
+                        <li><i class="fa fa-linkedin"></i></li>
+                    </div>
+                </a>
+                <a href="mailto:allievorley@gmail.com">
+                    <div class="icon">
+                        <li><i class="fa fa-envelope"></i></li>
+                    </div>
+                </a>
+            </div>
+        </ul>
+        <p class="copyright">&copy 2024 Alexis Vorley</p>
+    </footer>
+</html>
