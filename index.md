@@ -1,5 +1,3 @@
 ---
-title: Welcome to my blog
+title: Alexis Vorley Digital Portfolio
 ---
-
-<p>hello world</p>
