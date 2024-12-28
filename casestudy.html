@@ -1,1 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <!--icons for footer-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--font-->
+    <link rel="stylesheet" href="https://use.typekit.net/dvc1xlu.css">
+    <style>
+        img {
+            float: left;
+            width: 100%;
+            height: auto;
+        }
+
+        .project-container {
+            float: left;
+            width: 100%;
+        }
+
+        .heading {
+            float: left;
+            width: 100%;
+            text-align: center;
+        }
+
+        .heading-text {
+            display: flex;
+            flex-direction: row;
+        }
+        /* horizontal line https://www.geeksforgeeks.org/how-to-make-horizontal-line-with-words-in-the-middle-using-css/ */
+        .heading-text:before, .heading-text:after {
+            content: "";
+            flex: 1;
+            border-bottom: 1.5px solid white;
+            margin: auto;
+        }
+
+        .row {
+            float: left;
+            width: 100%;
+        }
+
+        .fullrow {
+            float: left;
+            width: 94%;
+        }
+
+        .column0 {
+            float: left;
+            width: 44%;
+        }
+
+        .column1 {
+            float: left;
+            width: 30%;
+        }
+        .column2 {
+            float: left;
+            width: 24%;
+        }
+        .column3 {
+            float: left;
+            width: 28%;
+        }
+
+        .column4 {
+            float: left;
+            width: 30%;
+            margin-right: 2%;
+        }
+        .column5 {
+            float: left;
+            width: 42%;
+            margin: 0 2%;
+        }
+        .column6 {
+            float: left;
+            width: 19%;
+            margin-left: 2%;
+            margin-top: 2%;
+        }
+
+        .column7 {
+            float: left;
+            width: 52%;
+            margin-right: 2%;
+        }
+        .column8 {
+            float: left;
+            width: 44%;
+            margin-left: 2%;
+        }
+
+        .column9 {
+            float: left;
+            width: 26%;
+            margin-right: 2%;
+        }
+        .column10 {
+            float: left;
+            width: 40%;
+            margin: 0 2%;
+        }
+        .column11 {
+            float: left;
+            width: 25%;
+            margin-left: 2%;
+        }
+
+        .column12 {
+            float: left;
+            width: 28%;
+            margin-right: 2%;
+        }
+        .column13 {
+            float: left;
+            width: 20%;
+            margin: 0 2%;
+        }
+        .column14 {
+            float: left;
+            width: 20%;
+            margin-left: 2%;
+        }
+
+        .column15 {
+            float: left;
+            width: 20%;
+            margin-right: 2%;
+        }
+        .column16 {
+            float: left;
+            width: 32%;
+            margin: 0 2%;
+        }
+        .column17 {
+            float: left;
+            width: 40%;
+            margin-left: 2%;
+        }
+
+        .column18 {
+            float: left;
+            width: 22%;
+        }
+        .column19 {
+            float: left;
+            width: 30%;
+        }
+        .column20 {
+            float: left;
+            width: 30%;
+        }
+
+        .column21 {
+            float: left;
+            width: 62%;
+        }
+        .column22 {
+            float: left;
+            width: 38%;
+        }
+
+        .box {
+            margin: 2%;
+            padding: 1%;
+            background-color: rgb(55, 71, 115);
+        }
+
+        .box:hover {
+            box-shadow: 20px 20px 18px rgb(13, 22, 48);
+            transform: scaleX(1.05) scaleY(1.05);
+            transition: 0.5s;
+        }
+
+        table, th, td {
+            border: 1.5px solid white;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        ul li { padding: 5px 0px; }
+    </style>
+</head>
+
+<body>
+        <!-- nav bar from https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp -->
+        <div id="myNav" class="overlay">
+
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="casestudy.html">Case Study</a>
+                <a href="writing.html">Writing</a>
+            </div>
+        </div>
+        
+        <div class="menu" style="width: 100%;">
+            <span onclick="openNav()" class="menu-symbol">&#8801;</span>
+        </div>
+        <script>
+            function openNav() {
+                document.getElementById("myNav").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("myNav").style.width = "0%";
+            }
+        </script>
+    <h1 class="title">CASE STUDY</h1>
+    <div class="project-container">
+        <h2 class="heading heading-text">Solar-powered & temperature-controlled model building</h2>
+        <div class="row">
+            <div class="column0 box">
+                <h3>Goal & Motivation:</h3>
+                <p>Greenhouse gas emissions have produced widespread, irreversible effects on the environment that will continue to grow. Converting to renewable energy sources, such as solar power, can address this crisis. Wind and solar power alone can generate 100% of the average energy demand in the US, significantly reducing the global impact of fossil fuel consumption.</p> 
+                <p>The primary motivation behind this project is to design and test a solar-powered model building to demonstrate the feasibility of utilizing solar power to regulate temperature.</p>
+            </div>
+            <div class="column0 box">
+                <h3>Constraints:</h3>
+                <ul>
+                    <li>Maintain a comfortable indoor temperature of 20-25 &deg;C during a cool sunny day (&phi;>750 W/m<sup>2</sup>, T 9-19 &deg;C)</li>
+                    <li>Store thermal energy to maintain temperature for 30 minutes of cloud cover</li>
+                    <li>Record all relevant temperatures (inside, outside, & thermal mass) and display data on LCD screen</li>
+                    <li>100% solar-powered</li>
+                </ul>            
+            </div>
+        </div>
+        <div class="row">
+            <div class="column1 box">
+                <h3>Step 1: Initial design</h3>
+                <ul>
+                    <li>Heat energy enters the system through one large window</li>
+                    <li>One solar panels on the roof</li>
+                    <li>Two ventilation flaps on opposite sides to maximize air flow between them (controlled by 180&deg; servo motor)</li>
+                    <li>Shading mechanism over the window (controlled by 360 servo motor)</li>
+                </ul>
+                <img src="images/design.jpeg">
+            </div>
+            <div class="column2 box">
+                <h3>Step 2: Initial calculations</h3>
+                <p>Total surface area = 0.46 m<sup>2</sup></p>
+                <p>Thermal resistance R<sub>th</sub> = 0.38 W/m<sup>2</sup></p>
+                <p>Power loss Q<sub>out</sub> = 22.4 W (assuming ∆T = 8.5 &deg;C)</p>
+                <p>Solar vector (in Davidson at noon in December) = 32.5&deg;</p>
+                <p>Window area = 0.03 m<sup>2</sup> (assuming 22.4 W power, 1000 W/m<sup>2</sup> solar flux, 0.9 transmission, and 32.5&deg; solar angle)</p>
+            </div>
+            <div class="column3 box">
+                <h3>Step 3: Print and assemble model</h3>
+                <p>Using Adobe Illustrator, laser cutter, and matboard</p>
+                <img src="images/matboard.jpeg">
+            </div>
+        </div>
+        <div class="fullrow box">
+            <h3 class="heading">Step 4: Indoor experiment</h3>
+            <div class="column4">
+                <p style="margin-bottom: 0;">Methods: </p>
+                <ul style="margin-top: 0;">
+                    <li>Heated model with 3 lightbulbs (7 W each) for 20 mins, then cooled for 20 mins</li>
+                    <li>Collected data with temperature sensors inside and outside on SD card</li>
+                    <li>Graphed a logarithmic function of T<sub>in</sub> with a linear fit to find T<sub>min</sub> and T<sub>max</sub> values</li>
+                </ul>
+                <p style="margin-bottom: 0;">Results: </p>
+                <ul style="margin-top: 0;">
+                    <li>T<sub>min</sub> = 23.75&deg;C, T<sub>max</sub> = 29&deg;C</li>
+                    <li>∆T = 5.25&deg;C, R<sub>th</sub> = 0.25&deg;C/W</li>
+                </ul>
+                <p style="margin-bottom: 0;">Discussion:</p>
+                <ul style="margin-top: 0;">
+                    <li>38% error for ∆T and 34% for R<sub>th</sub></li>
+                    <li>Likely due to gaps created by inserting temperature sensors and lightbulbs, allowing a significant amount of heat to escape</li>
+                </ul>
+
+            </div>
+            <div class="column5">
+                <img src="images/inside.png" style="margin-top: 5%;">
+            </div>
+            <div class="column6">
+                <img src="images/lnheating.png" style="margin-bottom: 15%;">
+                <img src="images/lncooling.png">
+            </div>
+        </div>
+        <div class="fullrow box">
+            <h3 class="heading">Step 5: Outdoor experiment </h3>
+            <div class="column7">
+                <p style="margin-bottom: 0;">Methods: </p>
+                <ul style="margin-top: 0;">
+                    <li>Same as experiment 1 using solar power & manually applying cooling mechanisms</li>
+                </ul>
+                <p style="margin-bottom: 0;">Results: </p>
+                <ul style="margin-top: 0;">
+                    <li>T<sub>min</sub> = 18&deg;C, T<sub>max</sub> = 26&deg;C</li>
+                    <li>∆T = 8&deg;C, R<sub>th</sub> = 0.35&deg;C/W</li>
+                </ul>
+                <p style="margin-bottom: 0;">Discussion:</p>
+                <ul style="margin-top: 0;">
+                    <li>6% error for ∆T and 8% for R<sub>th</sub>, showing substantial improvement</li>
+                 </ul>
+            </div>
+            <div class="column8">
+                <img src="images/outside.png">
+            </div>
+        </div>
+        <div class="fullrow box">
+            <h3 class="heading">Step 6: Thermal capacity experiment</h3>
+            <div class="column9">
+                <p style="margin-bottom: 0;">Methods</p>
+                <ul style="margin-top: 0;">
+                    <li>Recorded temperatures with water thermal capacity (1848 J/&deg;C)</li>
+                </ul>
+                <p style="margin-bottom: 0;">Results</p>
+                <ul style="margin-top: 0;">
+                    <li>Indoor temperature successfully remained constant after outside temperature dropped</li>
+                </ul>
+                <p>Added ceramic container with 464 J/&deg;C for a total thermal capacity of 2312 J/&deg;C</p>
+            </div>
+            <div class="column10">
+                <img src="images/thermalcapacity.png">
+            </div>
+            <div class="column11">
+                <img src="images/thermcap.jpeg">
+            </div>
+        </div>
+        <div class="fullrow box">
+            <h3 class="heading">Step 7: Print and assemble final version</h3>
+            <div class="column12">
+                <p style="margin-bottom: 0;">Changes</p>
+                <ul style="margin-top: 0;">
+                    <li>Switched direction of top flap to increase air flow</li>
+                    <li>Added layer of fabric insulation to roof to prevent heat loss</li>
+                </ul>
+            </div>
+            <div class="column13">
+                <img src="images/dec1.jpeg">
+            </div>
+            <div class="column13">
+                <img src="images/dec2.jpeg">
+            </div>
+            <div class="column14">
+                <img src="images/dec3.jpeg">
+            </div>
+        </div>
+        <div class="fullrow box">
+            <h3 class="heading">Step 8: Electronics</h3>
+            <div class="column15">
+                <p style="margin-bottom: 0;">Power Sources</p>
+                <ul style="margin-top: 0;">
+                    <li>2 solar panels provide 36,400 J</li>
+                    <li>Capacitor stores 40.5 J</li>
+                </ul>
+            </div>
+            <div class="column16">
+                <table style="width:100%">
+                    <tr>
+                      <th colspan="3">Power Sinks</th>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>Continuous Power (W)</td>
+                      <td>Total Energy (J)</td>
+                    </tr>
+                    <tr>
+                      <td>Arduino</td>
+                      <td>0.41</td>
+                      <td>4374</td>
+                    </tr>
+                    <tr>
+                        <td>LCD</td>
+                        <td>0.1</td>
+                        <td>1080</td>
+                    </tr>
+                    <tr>
+                        <td>SD Card Module</td>
+                        <td>0.16</td>
+                        <td>1728</td>
+                    </tr>
+                    <tr>
+                        <td>LEDs (2)</td>
+                        <td>0.06</td>
+                        <td>162</td>
+                    </tr>
+                    <tr>
+                        <td>Servo Motor (180)</td>
+                        <td>0.75</td>
+                        <td>8.9</td>
+                    </tr>
+                    <tr>
+                        <td>Servo Motor (360)</td>
+                        <td>0.75</td>
+                        <td>40.5</td>
+                    </tr>
+                  </table>
+            </div>
+            <div class="column17">
+                <img src="images/circuit.jpeg">
+            </div>
+        </div>
+        <div class="row">
+            <div class="column18 box">
+                <h3>Step 9: Integrate electronics</h3>
+                <img src="images/final.jpeg">
+            </div>
+            <div class="column19 box">
+                <h3>Step 10: Final experiment (40 mins)</h3>
+                <img src="images/wood.png">
+            </div>
+            <div class="column20 box">
+                <h3>Step 11: Final performance (3 hours)</h3>
+                <img src="images/tinytown.png">
+            </div>
+        </div>
+        <div class="fullrow box">
+        <h3 class="heading">Step 12: Analysis</h3>
+        <p style="margin-bottom: 0;">Results:</p>
+        <ul style="margin-top: 0;">
+            <li>Heating and cooling mechanisms were effective</li>
+            <li>Thermal capacity temperature remained relatively constant at 17.5-18℃</li>
+            <li>Indoor temp stayed within 20-25℃ range for the majority of the three-hour experimental period</li>
+            <li>High temps from 0-4000 secs - shade system was not functioning correctly due to switched sensors</li>
+            <li>Sharp drop around 7000 seconds - aligns with decrease in solar flux when the sun went behind a cloud</li>
+        </ul>
+        <p style="margin-bottom: 0;">Discussion:</p>
+        <ul style="margin-top: 0;">
+            <li>Sources of error - didn't account for cooling due to wind, gap from inserting temp sensors through ventilation flap</li>
+            <li>Improvements - increase thermal capacity (maintain temp for longer period with low solar flux), reduce threshold range for cooling mechanisms (activate more often, minimizing large temp fluctuations)</li>
+        </ul>
+        <p style="margin-bottom: 0;">Applications & feasibility:</p>
+        <ul style="margin-top: 0;">
+            <li>Model was energy efficient and cooling mechanisms were effective - could be applied on larger scale, but would be difficult to rely entirely on solar power (requires continuous high solar flux)</li>
+        </ul>
+
+
+        </div>
+    </div>
+    
+    <div class="fullrow box">
+        <div class="column21">
+            <h3 class="heading">Takeaways</h3>
+            <ul>
+                <li>Gained experience with the engineering design process - continuously making improvements, collecting data to inform changes</li>
+                <li>Integrated different disciplines (physics, math, computer science, environmental science, & art) to create a project with tangible applications</li>
+                <li>Collaborated in a team with diverse perspectives and levels of experience across different topics</li>
+                <li>Strengthened understanding of thermodynamics, solar energy, energy storage, & electronics principles and their applications</li>
+                <li>Technical skills - building Arduino circuits, C++ programming, data visualization</li>
+            </ul>
+        </div>
+    <img src="images/team.JPG" class="column22">
+    </div>  
+
+
+    <!--footer-->
+    <footer id="footer-content">
+        <!-- top scroll button from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp -->
+        <button onclick="topFunction()" class="topBtn" title="Go to top">&uarr; Back to top</button>
+        <script>
+            mybutton = document.getElementsByClasses("topBtn");
+    
+            function topFunction() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+        </script>
+        <ul class="foot-ul">
+            <div id="icon-container">
+                <a href="https://www.instagram.com/alexisvorley/" target="blank">
+                    <div class="icon">
+                        <li><i class="fa fa-instagram"></i></li>
+                    </div>
+                </a>
+                <a href="https://www.linkedin.com/in/allie-vorley-a3116120b/" target="blank">
+                    <div class="icon">
+                        <li><i class="fa fa-linkedin"></i></li>
+                    </div>
+                </a>
+                <a href="mailto:allievorley@gmail.com">
+                    <div class="icon">
+                        <li><i class="fa fa-envelope"></i></li>
+                    </div>
+                </a>
+            </div>
+        </ul>
+        <p class="copyright">&copy 2024 Alexis Vorley</p>
+    </footer>
+    
+</body>
+</html>
