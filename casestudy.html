@@ -222,13 +222,13 @@
             <div class="column0 box">
                 <h3>Goal & Motivation:</h3>
                 <p>Greenhouse gas emissions have produced widespread, irreversible effects on the environment that will continue to grow. Converting to renewable energy sources, such as solar power, can address this crisis. Wind and solar power alone can generate 100% of the average energy demand in the US, significantly reducing the global impact of fossil fuel consumption.</p> 
-                <p>The primary motivation behind this project is to design and test a solar-powered model building to demonstrate the feasibility of utilizing solar power to regulate temperature.</p>
+                <p>The primary motivation behind this project is to design and test a solar-powered model building to demonstrate the feasibility of utilizing solar power to regulate building temperature.</p>
             </div>
             <div class="column0 box">
                 <h3>Constraints:</h3>
                 <ul>
                     <li>Maintain a comfortable indoor temperature of 20-25 &deg;C during a cool sunny day (&phi;>750 W/m<sup>2</sup>, T 9-19 &deg;C)</li>
-                    <li>Store thermal energy to maintain temperature for 30 minutes of cloud cover</li>
+                    <li>Store thermal energy to maintain interior temperature for 30 minutes of cloud cover</li>
                     <li>Record all relevant temperatures (inside, outside, & thermal mass) and display data on LCD screen</li>
                     <li>100% solar-powered</li>
                 </ul>            
@@ -239,9 +239,9 @@
                 <h3>Step 1: Initial design</h3>
                 <ul>
                     <li>Heat energy enters the system through one large window</li>
-                    <li>One solar panels on the roof</li>
+                    <li>Solar panel attached to the roof</li>
                     <li>Two ventilation flaps on opposite sides to maximize air flow between them (controlled by 180&deg; servo motor)</li>
-                    <li>Shading mechanism over the window (controlled by 360 servo motor)</li>
+                    <li>Shading mechanism over the window (controlled by 360&deg; servo motor)</li>
                 </ul>
                 <img src="images/design.jpeg">
             </div>
@@ -266,7 +266,7 @@
                 <ul style="margin-top: 0;">
                     <li>Heated model with 3 lightbulbs (7 W each) for 20 mins, then cooled for 20 mins</li>
                     <li>Collected data with temperature sensors inside and outside on SD card</li>
-                    <li>Graphed a logarithmic function of T<sub>in</sub> with a linear fit to find T<sub>min</sub> and T<sub>max</sub> values</li>
+                    <li>Graphed logarithmic function of T<sub>in</sub> with a linear fit to find T<sub>min</sub> and T<sub>max</sub> values</li>
                 </ul>
                 <p style="margin-bottom: 0;">Results: </p>
                 <ul style="margin-top: 0;">
@@ -314,13 +314,13 @@
             <div class="column9">
                 <p style="margin-bottom: 0;">Methods</p>
                 <ul style="margin-top: 0;">
-                    <li>Recorded temperatures with water thermal capacity (1848 J/&deg;C)</li>
+                    <li>Recorded temperatures using water as thermal capacity (1848 J/&deg;C)</li>
                 </ul>
                 <p style="margin-bottom: 0;">Results</p>
                 <ul style="margin-top: 0;">
                     <li>Indoor temperature successfully remained constant after outside temperature dropped</li>
                 </ul>
-                <p>Added ceramic container with 464 J/&deg;C for a total thermal capacity of 2312 J/&deg;C</p>
+                <p>Later added ceramic container with 464 J/&deg;C for a total thermal capacity of 2312 J/&deg;C</p>
             </div>
             <div class="column10">
                 <img src="images/thermalcapacity.png">
@@ -422,19 +422,19 @@
         <p style="margin-bottom: 0;">Results:</p>
         <ul style="margin-top: 0;">
             <li>Heating and cooling mechanisms were effective</li>
-            <li>Thermal capacity temperature remained relatively constant at 17.5-18℃</li>
+            <li>Thermal mass temperature remained relatively constant at 17.5-18℃</li>
             <li>Indoor temp stayed within 20-25℃ range for the majority of the three-hour experimental period</li>
             <li>High temps from 0-4000 secs - shade system was not functioning correctly due to switched sensors</li>
             <li>Sharp drop around 7000 seconds - aligns with decrease in solar flux when the sun went behind a cloud</li>
         </ul>
         <p style="margin-bottom: 0;">Discussion:</p>
         <ul style="margin-top: 0;">
-            <li>Sources of error - didn't account for cooling due to wind, gap from inserting temp sensors through ventilation flap</li>
-            <li>Improvements - increase thermal capacity (maintain temp for longer period with low solar flux), reduce threshold range for cooling mechanisms (activate more often, minimizing large temp fluctuations)</li>
+            <li>Sources of error - didn't account for cooling due to wind, gap from inserting temp sensors through ventilation flap allowed heat to escape</li>
+            <li>Improvements - increase thermal capacity (would be able to maintain temp for longer period with low solar flux), reduce threshold range for cooling mechanisms (would activate more often, minimizing large temp fluctuations)</li>
         </ul>
         <p style="margin-bottom: 0;">Applications & feasibility:</p>
         <ul style="margin-top: 0;">
-            <li>Model was energy efficient and cooling mechanisms were effective - could be applied on larger scale, but would be difficult to rely entirely on solar power (requires continuous high solar flux)</li>
+            <li>Model was energy efficient and cooling mechanisms were effective - cooling system could be applied on larger scale, but heating system is not feasible (requires continuous high solar flux to rely entirely on solar power)</li>
         </ul>
 
 
